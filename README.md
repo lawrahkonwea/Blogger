@@ -158,6 +158,6 @@ I would like to thank microverse for serving this opportunity.
 
 ## 📝 License <a name="license"></a>
 
-This project is [MIT](https://github.com/lawrahkonwea/Rails_Blog_app/blob/data_model/LICENSE) licensed.
+This project is [MIT](https://github.com/lawrahkonwea/Blogger/blob/data-model/LICENSE) licensed.
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
