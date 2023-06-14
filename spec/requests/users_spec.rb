@@ -14,7 +14,7 @@ RSpec.describe 'Users', type: :request do
 
     it 'should include correct placeholder' do
       get '/users'
-      expect(response.body).to include('')
+      expect(response.body).to include('<h1>This is a list of users</h1>')
     end
   end
 
