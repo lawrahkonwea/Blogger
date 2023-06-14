@@ -18,5 +18,20 @@ RSpec.describe 'Users', type: :request do
     end
   end
 
- 
+  context 'GET /show' do
+    it 'returns http success' do
+      get '/users/1'
+      expect(response).to be_successful
+    end
+
+    it 'renders the correct template' do
+      get '/users/1'
+      expect(response).to render_template('show')
+    end
+
+    it 'should include correct placeholder' do
+      get '/users/1'
+      expect(response.body).to include('<h1>This is the user for a given ID</h1>')
+    end
+  end
 end
