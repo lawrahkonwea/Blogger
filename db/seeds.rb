@@ -19,3 +19,11 @@ sixth_post = Post.create(author_id: second_user.id, title: 'Testing', text: 'TWO
 seventh_post = Post.create(author_id: third_user.id, title: 'Checking', text: 'THREE This is my first post')
 eight_post = Post.create(author_id: third_user.id, title: 'Another day to slay', text: 'THREE This is my second post')
 nineth_post = Post.create(author_id: third_user.id, title: 'favorites', text: 'THREE This is my third post')
+
+
+first_comment = Comment.create(author_id: first_user.id, post_id: first_post.id, text: 'Hi Tom!' )
+second_comment = Comment.create(author_id: second_user.id, post_id: second_post.id, text: 'Is someone there?')
+third_comment = Comment.create(author_id: first_user.id, post_id: first_post.id, text: 'I like this' )
+fourth_comment = Comment.create(author_id: second_user.id, post_id: second_post.id, text: 'Something good coming')
+fifth_comment = Comment.create(author_id: first_user.id, post_id: first_post.id, text: 'Create big things' )
+sixth_comment = Comment.create(author_id: second_user.id, post_id: second_post.id, text: 'Advantageous')
