@@ -27,3 +27,10 @@ third_comment = Comment.create(author_id: first_user.id, post_id: first_post.id,
 fourth_comment = Comment.create(author_id: second_user.id, post_id: second_post.id, text: 'Something good coming')
 fifth_comment = Comment.create(author_id: first_user.id, post_id: first_post.id, text: 'Create big things' )
 sixth_comment = Comment.create(author_id: second_user.id, post_id: second_post.id, text: 'Advantageous')
+
+first_like = Like.create(author_id: second_user.id, post_id: first_post.id)
+second_like = Like.create(author_id: first_user.id, post_id: second_post.id)
+third_like = Like.create(author_id: second_user.id, post_id: first_post.id)
+fourth_like = Like.create(author_id: first_user.id, post_id: second_post.id)
+fifth_like = Like.create(author_id: second_user.id, post_id: first_post.id)
+sixth_like = Like.create(author_id: first_user.id, post_id: second_post.id)
