@@ -22,11 +22,12 @@ nineth_post = Post.create(author_id: third_user.id, title: 'favorites', text: 'T
 
 
 first_comment = Comment.create(author_id: first_user.id, post_id: first_post.id, text: 'Hi Tom!' )
-second_comment = Comment.create(author_id: second_user.id, post_id: second_post.id, text: 'Is someone there?')
+second_comment = Comment.create(author_id: second_user.id, post_id: fifth_post.id, text: 'Is someone there?')
 third_comment = Comment.create(author_id: first_user.id, post_id: first_post.id, text: 'I like this' )
-fourth_comment = Comment.create(author_id: second_user.id, post_id: second_post.id, text: 'Something good coming')
+fourth_comment = Comment.create(author_id: second_user.id, post_id: sixth_post.id, text: 'Something good coming')
 fifth_comment = Comment.create(author_id: first_user.id, post_id: first_post.id, text: 'Create big things' )
 sixth_comment = Comment.create(author_id: second_user.id, post_id: second_post.id, text: 'Advantageous')
+tenth_comment = Comment.create(author_id: second_user.id, post_id: fourth_post.id, text: 'trendy')
 
 first_like = Like.create(author_id: second_user.id, post_id: first_post.id)
 second_like = Like.create(author_id: first_user.id, post_id: second_post.id)
