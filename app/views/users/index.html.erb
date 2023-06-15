@@ -1,19 +1,6 @@
-<table>
-  <thead>
-    <tr>
-      <th>Name</th>
-      <th>Photo</th>
-      <th>Bio</th>
-    </tr>
-  </thead>
-  <tbody>
-    <% @users.each do |user| %>
-      <tr>
-        <td><%= user.name %></td>
-        <td><img src="<%= user.photo %>" alt="User" /></td>
-        <td><%= user.bio %></td>
-      </tr>
-      <%= link_to "view", user %>
-    <% end %>
-  </tbody>
-</table>
+<div class="container">
+  <h1 class="heading">RailsBlog</h1>
+  <% @users.each do |user| %>
+    <%= render partial: "users/user", locals: { user: user } %>
+  <% end %>
+</div>
