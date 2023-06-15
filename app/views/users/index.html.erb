@@ -1,6 +1,6 @@
 <div class="container">
   <h1 class="heading">RailsBlog</h1>
-  <% @users.each do |user| %>
+  <%= render @users do |user| %>
     <%= render partial: "users/user", locals: { user: user } %>
   <% end %>
 </div>
