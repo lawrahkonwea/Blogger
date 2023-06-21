@@ -25,11 +25,11 @@ RSpec.describe 'User', type: :feature, js: false do
     end
 
     it 'shows the title of the post' do
-      expect(page).to have_content('Hello')
+      expect(page).to have_content(@first_post.title)
     end
 
     it 'shows the body of the post' do
-      expect(page).to have_content('This is my first post')
+      expect(page).to have_content(@first_post.text)
     end
 
     it 'shows the first comment of the post' do
