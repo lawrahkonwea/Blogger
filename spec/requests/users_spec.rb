@@ -1,14 +1,11 @@
 require 'rails_helper'
 
-base_url = 'http://localhost:3000'
-
 first_user = User.first
 last_user = User.last
 
-random = rand(first_user.id..last_user.id)
+rand(first_user.id..last_user.id)
 
 RSpec.describe 'Users', type: :request do
-
   context 'GET /index' do
     it 'returns http success' do
       get '/users'
