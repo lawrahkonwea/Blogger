@@ -15,8 +15,11 @@ RSpec.describe 'index_show', type: :feature, js: false do
   end
 
   describe 'show page' do
-    it 'shows the name and profile photo of user' do
+    it 'shows the profile photo of user' do
       expect(page.find('img')['src']).to eq @user.photo
+    end
+
+    it 'shows the users username' do
       expect(page.find('.username_show').text).to eq @user.name
     end
 
@@ -44,9 +47,14 @@ RSpec.describe 'index_show', type: :feature, js: false do
     end
 
     it 'should have a button to see all posts' do
-      user = User.find_by(name: 'Amaka')
-      visit user_path(user)
-      expect(page).to have_link('See all posts')
+      button = page.find('.button')
+      expect(button.text).to eq 'See all posts'
+      expect(button['href']).to eq "#{random}/posts/"
+    end
+
+    it "When I click to see all posts, it redirects me to the user's post's index page." do
+      click_on 'See all posts'
+      expect(page).to have_current_path("#{base_url}/users/#{random}/posts/")
     end
   end
 end
