@@ -7,7 +7,7 @@ RSpec.describe 'User', type: :feature, js: false do
     @first_post = Post.create(author: @user, title: 'Hello', text: 'Hi there this is my first post')
     @comment = Comment.create(post: @first_post, author: @user, text: 'Hi Tom, How are you doing!')
   end
-  
+
   it 'shows the title of the post' do
     visit "/users/#{@user.id}/posts/#{@first_post.id}"
     expect(page).to have_content(@first_post.title)
