@@ -2,36 +2,34 @@ require 'rails_helper'
 
 RSpec.describe 'Posts', type: :request do
   context 'GET /index' do
+    before(:example) { get('/users/7/posts') }
+
     it 'returns http success' do
-      get '/users/1/posts'
       expect(response).to be_successful
     end
 
     it 'renders the correct template' do
-      get '/users/1/posts'
       expect(response).to render_template('index')
     end
 
     it 'should include correct placeholder' do
-      get '/users/1/posts'
-      expect(response.body).to include('<h1>This is a list of Posts</h1>')
+      expect(response.body).to include('<h1>Amaka</h1>')
     end
   end
 
   context 'GET /show' do
+    before(:example) { get('/users/7/posts/26') }
+
     it 'returns http success' do
-      get '/users/1/posts/1'
       expect(response).to be_successful
     end
 
     it 'renders the correct template' do
-      get '/users/1/posts/1'
       expect(response).to render_template('show')
     end
 
     it 'should include correct placeholder' do
-      get '/users/1/posts/1'
-      expect(response.body).to include('<h1>This is a list of posts for a given user</h1>')
+      expect(response.body).to include('<span> Ifeanyi : Advantageous</span>')
     end
   end
 end
