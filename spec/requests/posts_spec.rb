@@ -2,7 +2,7 @@ require 'rails_helper'
 
 RSpec.describe 'Posts', type: :request do
   context 'GET /index' do
-    before(:example) { get('/users/7/posts') }
+    before(:example) { get('/users/1/posts') }
 
     it 'returns http success' do
       expect(response).to be_successful
@@ -18,7 +18,7 @@ RSpec.describe 'Posts', type: :request do
   end
 
   context 'GET /show' do
-    before(:example) { get('/users/7/posts/26') }
+    before(:example) { get('/users/1/posts/1') }
 
     it 'returns http success' do
       expect(response).to be_successful
@@ -29,7 +29,7 @@ RSpec.describe 'Posts', type: :request do
     end
 
     it 'should include correct placeholder' do
-      expect(response.body).to include('<span> Ifeanyi : Advantageous</span>')
+      expect(response.body).to include('<span> Amaka : Create big things</span>')
     end
   end
 end
