@@ -9,19 +9,29 @@ class PostsController < ApplicationController
   end
 
   def new
-    @user = current_user
-    @post = Post.new
+    @post = current_user.posts.build
   end
 
   def create
-    @post = @current_user.posts.new(post_params)
+    @post = current_user.posts.build(post_params)
 
     respond_to do |format|
       if @post.save
-        format.html { redirect_to @post }
+        format.html { redirect_to "/users/#{current_user.id}/posts" }      
       else
         format.html { render :new }
       end
     end
+  end
+
+  def destroy
+    @post = Post.find(params[:id])
+    @post.destroy!
+  end
+  
+  private
+
+  def post_params
+     params.require(:post).permit(:title, :text)
   end
 end
