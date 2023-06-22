@@ -1,7 +1,12 @@
 require 'rails_helper'
 
+first_user = User.first
+last_user = User.last
+
+rand(first_user.id..last_user.id)
+
 RSpec.describe 'Users', type: :request do
-  describe 'GET /index' do
+  context 'GET /index' do
     it 'returns http success' do
       get '/users'
       expect(response).to be_successful
@@ -14,7 +19,7 @@ RSpec.describe 'Users', type: :request do
 
     it 'should include correct placeholder' do
       get '/users'
-      expect(response.body).to include('<h1>This is a list of users</h1>')
+      expect(response.body).to include('<h1 class="heading">RailsBlog</h1>')
     end
   end
 
@@ -31,7 +36,7 @@ RSpec.describe 'Users', type: :request do
 
     it 'should include correct placeholder' do
       get '/users/1'
-      expect(response.body).to include('<h1>This is the user for a given ID</h1>')
+      expect(response.body).to include('<h2>Bio</h2>')
     end
   end
 end
