@@ -17,7 +17,7 @@ class PostsController < ApplicationController
 
     respond_to do |format|
       if @post.save
-        format.html { redirect_to "/users/#{current_user.id}/posts" }      
+        format.html { redirect_to "/users/#{current_user.id}/posts" }
       else
         format.html { render :new }
       end
@@ -28,10 +28,10 @@ class PostsController < ApplicationController
     @post = Post.find(params[:id])
     @post.destroy!
   end
-  
+
   private
 
   def post_params
-     params.require(:post).permit(:title, :text)
+    params.require(:post).permit(:title, :text)
   end
 end
