@@ -27,10 +27,10 @@ class PostsController < ApplicationController
   end
 
   def destroy
-    @comment = Post.find(params[:id])
+    @post = Post.find(params[:id])
     authorize! :destroy, @post
     @post.destroy
-    redirect_to "/users/#{current_user.id}/posts" notice: 'Comment was successfully deleted.'
+    redirect_to "/users/#{current_user.id}/posts", notice: 'Post was successfully deleted.'
   end
 
   private

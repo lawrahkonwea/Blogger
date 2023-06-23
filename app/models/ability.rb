@@ -28,5 +28,17 @@ class Ability
     #
     # See the wiki for details:
     # https://github.com/CanCanCommunity/cancancan/blob/develop/docs/define_check_abilities.md
+
+    user ||= User.new # guest user (not logged in)
+
+    if user.role == 'admin'
+      can :manage, :all # admin can do everything
+    else
+      can :read, :all # everyone can read everything
+      can :create, Comment # everyone can create comments
+      can :create, Post # everyone can create comments
+      can :destroy, Comment, author_id: user.id # users can delete their own comments
+      can :destroy, Post, author_id: user.id # users can delete their own posts
+    end
   end
 end
