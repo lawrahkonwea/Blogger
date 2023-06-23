@@ -68,6 +68,7 @@ group :development do
 end
 
   gem 'devise'
+  gem 'letter_opener'
   gem 'cancancan'
 
 group :test do

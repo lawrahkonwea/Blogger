@@ -6,9 +6,9 @@
 #   movies = Movie.create([{ name: "Star Wars" }, { name: "Lord of the Rings" }])
 #   Character.create(name: "Luke", movie: movies.first)
 
-first_user = User.create(name: 'Amaka', photo: 'https://avatars.githubusercontent.com/u/105006208?v=4', bio: 'Teacher from Mexico.')
-second_user = User.create(name: 'Ifeanyi', photo: 'https://avatars.githubusercontent.com/u/105528809?v=4', bio: 'Teacher from Poland.')
-third_user = User.create(name: 'Mildred', photo: 'https://avatars.githubusercontent.com/u/78565848?v=4', bio: 'Teacher from Hungary.')
+first_user = User.create(name: 'Onome', photo: 'https://avatars.githubusercontent.com/u/100999396?v=4', bio: 'Teacher from Capetown.', email:'onomechris@gmail.com', password:'44444444')
+second_user = User.create(name: 'Ifeanyi', photo: 'https://avatars.githubusercontent.com/u/105528809?v=4', bio: 'Teacher from Poland.', email: 'ifeanyioti@gmail.com', password:'44445555')
+third_user = User.create(name: 'Mildred', photo: 'https://avatars.githubusercontent.com/u/78565848?v=4', bio: 'Teacher from Hungary.', email: 'mildred@gmail.com', password:'44446666')
 
 first_post = Post.create(author_id: first_user.id, title: 'Hello', text: 'ONE This is my first post')
 second_post = Post.create(author_id: first_user.id, title: 'Hi there', text: 'ONE This is my second post')
