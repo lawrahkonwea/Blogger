@@ -1,7 +1,9 @@
 class ApplicationController < ActionController::Base
-  before_action :authenticate_user!
+  skip_before_action :verify_authenticity_token # Removing authenticity token verification while using JSON
 
-  protect_from_forgery with: :exception
+  before_action :authenticate_user! 
+
+  protect_from_forgery with: :exception, unless: -> { request.format.json? }
 
   before_action :update_allowed_parameters, if: :devise_controller?
 
