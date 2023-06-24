@@ -1,6 +1,6 @@
 <a name="readme-top"></a>
-<h1 align='center'> Blogger App</h1>
 
+<h1 align='center'> Blogger App</h1>
 
 # 📗 Table of Contents
 
@@ -24,11 +24,12 @@
   - [🙏 Acknowledgments ](#-acknowledgments-)
   - [📝 License ](#-license-)
 
-
 # Rails Blog <a name="about-project"></a>
+
 > Blogger app that will be used to post blog posts and perform actions like liking and commenting on the blog post.
 
 ## 🛠 Built With <a name="built-with"></a>
+
 ### Tech Stack <a name="tech-stack"></a>
 
 <details>
@@ -38,7 +39,6 @@
   </ul>
 </details>
 
-
 ### Key Features <a name="key-features"></a>
 
 - Create and manage blog posts
@@ -46,7 +46,6 @@
 - Like or comment on a blog posts
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
-
 
 ## 💻 Getting Started <a name="getting-started"></a>
 
@@ -59,9 +58,9 @@ In order to run this project you need:
 - Mac or PC
 - Understanding OOP principles
 - Have the following installed on your machine
-    - [Ruby](https://www.ruby-lang.org/en/) 
-    - [Rails](https://rubyonrails.org/)
-    - [PostgreSQL](https://www.postgresql.org/)
+  - [Ruby](https://www.ruby-lang.org/en/)
+  - [Rails](https://rubyonrails.org/)
+  - [PostgreSQL](https://www.postgresql.org/)
 
 ### Setup
 
@@ -104,26 +103,31 @@ rails server
 To run tests, run the following command:
 
 ```sh
-rspec spec 
+rspec spec
 ```
-
 
 ### Deployment
 
-To deploy the app you can use 
+To deploy the app you can use
 
 - [Render](https://www.render.com/)
 - [Heroku](https://www.heroku.com/)
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
-
 ## 👥 Author <a name="author"></a>
 
 ### 👤 **Amaka Konwea**:
+
 - GitHub: [@lawrah_on_GitHub](https://github.com/lawrahkonwea)
 - Twitter: [@lawrah_on_Twitter](https://twitter.com/lawrah_xo)
 - LinkedIn: [@laura_on_LinkedIn](https://www.linkedin.com/in/amakalaurakonwea/)
+
+👤 **Kayode Olatunji**
+
+- GitHub: [@githubhandle](https://github.com/Jolak5)
+- Twitter: [@twitterhandle](https://twitter.com/I_amBabakay)
+- LinkedIn: [LinkedIn](https://www.linkedin.com/in/olatunji-kayode/)
 
 ## 🔭 Future Features <a name="future-features"></a>
 
@@ -131,7 +135,6 @@ To deploy the app you can use
 - [ ] **Implement authentication**
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
-
 
 ## 🤝 Contributing <a name="contributing"></a>
 
@@ -141,20 +144,17 @@ Feel free to check the [issues page](https://github.com/lawrahkonwea/Rails_blog_
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
-
 ## ⭐️ Show your support <a name="support"></a>
 
 If you like this project, please leave a ⭐️
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
-
 ## 🙏 Acknowledgments <a name="acknowledgements"></a>
 
 I would like to thank microverse for serving this opportunity.
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
-
 
 ## 📝 License <a name="license"></a>
 
