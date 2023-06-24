@@ -5,7 +5,7 @@ class Api::V1::PostsController < ApplicationController
   def index
     @post = @user.posts.includes(:author)
 
-    render json: @post.to_json(include: :comments), status: :created
+    render json: @post.to_json(include: :comments), status: :success
   end
 
   private
