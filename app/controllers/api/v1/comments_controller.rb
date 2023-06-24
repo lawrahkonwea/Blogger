@@ -2,6 +2,11 @@ class Api::V1::CommentsController < ApplicationController
   protect_from_forgery with: :null_session
   before_action :set_post, only: %i[create index]
 
+  def index
+    @comments = @post.comments.includes(:author)
+    render json: @comments
+  end
+
   def create
     @comment = @post.comments.create(comment_params)
     @comment.author_id = current_user.id
